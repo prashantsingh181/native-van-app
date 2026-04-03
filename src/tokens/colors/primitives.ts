@@ -22,4 +22,7 @@ export const primitives = {
   gray70: "#aaaaaa",
   gray80: "#b9b9b9",
   gray90: "#c7c7c7",
+
+  // green
+  green700: "#115E59",
 };

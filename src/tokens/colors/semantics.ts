@@ -17,9 +17,11 @@ export const colors = {
   textSecondary: primitives.gray50,
   textMuted: primitives.gray70,
   textInverted: primitives.white,
+  textBadge: primitives.orange200,
 
   bgDarkPrimary: primitives.gray10,
   bgDarkSecondary: primitives.gray40,
+  bgGreenBadge: primitives.green700,
 };
 
 export type Colors = typeof colors;

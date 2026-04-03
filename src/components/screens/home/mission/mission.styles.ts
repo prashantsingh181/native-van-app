@@ -12,10 +12,14 @@ export const generateMissionStyles = (colors: Colors) =>
     },
     missionTitle: {
       fontSize: 28,
-      fontWeight: 700,
+      fontWeight: "700",
       color: colors.textPrimary,
     },
-    missionText: { fontWeight: 500, color: colors.textPrimary, marginTop: 20 },
+    missionText: {
+      fontWeight: "500",
+      color: colors.textPrimary,
+      marginTop: 20,
+    },
     tagLineContainer: {
       backgroundColor: colors.bgBrandBold,
       padding: 20,
@@ -24,7 +28,7 @@ export const generateMissionStyles = (colors: Colors) =>
     },
     tagLineText: {
       color: colors.textPrimary,
-      fontWeight: 700,
+      fontWeight: "700",
       fontSize: 22,
     },
     tagLineLink: {
