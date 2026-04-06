@@ -23,23 +23,4 @@ export const generateVanCardStyles = (colors: Colors) =>
       color: colors.textPrimary,
       alignSelf: "flex-end",
     },
-    typeBadge: {
-      borderRadius: 5,
-      paddingHorizontal: 12,
-      paddingVertical: 8,
-      alignSelf: "flex-start",
-      fontWeight: "600",
-      marginTop: 10,
-      color: colors.textBadge,
-      fontSize: 14,
-    },
-    simpleTypeBadge: {
-      backgroundColor: colors.bgBrandDark,
-    },
-    luxuryTypeBadge: {
-      backgroundColor: colors.bgDarkPrimary,
-    },
-    ruggedTypeBadge: {
-      backgroundColor: colors.bgGreenBadge,
-    },
   });

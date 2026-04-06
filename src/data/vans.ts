@@ -1,8 +1,8 @@
 import { vanImages } from "@/assets/images/vans";
 import { VanTypes } from "@/enums";
-import { Vans } from "@/types/vans";
+import { Van } from "@/types/vans";
 
-export const vans: Vans[] = [
+export const vans: Van[] = [
   {
     id: "1",
     name: "Modest Explorer",

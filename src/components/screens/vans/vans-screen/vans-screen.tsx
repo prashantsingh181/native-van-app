@@ -3,7 +3,7 @@ import { useFetch } from "@/hooks/useFetch";
 import { useStyles } from "@/hooks/useStyles";
 import { api } from "@/services/api";
 import { useEffect, useState } from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Filters } from "../filters";
 import { VansList } from "../vans-list";
@@ -36,14 +36,16 @@ export const VansScreen = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.heading}>Explore our van options</Text>
       <Filters
         activeFilters={activeFilters}
         handleSelectFilter={handleSelectFilter}
         handleClearFilters={handleClearFilters}
       />
-      <VansList vans={vans} loading={loading} error={error} />
+      <View style={{ flex: 1, marginTop: 30, marginBottom: 20 }}>
+        <VansList vans={vans} loading={loading} error={error} />
+      </View>
     </SafeAreaView>
   );
 };

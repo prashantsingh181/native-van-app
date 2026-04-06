@@ -1,3 +1,4 @@
+import { VanBadge } from "@/components/ui/van-badge";
 import { VanTypes } from "@/enums";
 import { useStyles } from "@/hooks/useStyles";
 import React from "react";
@@ -13,33 +14,17 @@ export const Filters = ({
   const styles = useStyles(generateFilterStyles);
   const vanTypes = Object.values(VanTypes);
 
-  function getActiveFilterStyles(type: VanTypes) {
-    switch (type) {
-      case VanTypes.Simple:
-        return styles.activeSimpleFilter;
-      case VanTypes.Rugged:
-        return styles.activeRuggedFilter;
-      case VanTypes.Luxury:
-        return styles.activeLuxuryFilter;
-      default:
-        return null;
-    }
-  }
-
   return (
     <View style={styles.container}>
       <View style={styles.filterContainer}>
         {vanTypes.map((type) => (
-          <TouchableOpacity key={type} onPress={() => handleSelectFilter(type)}>
-            <Text
-              style={[
-                styles.filter,
-                activeFilters.includes(type) && getActiveFilterStyles(type),
-              ]}
-            >
-              {type}
-            </Text>
-          </TouchableOpacity>
+          <VanBadge
+            key={type}
+            type={type}
+            selectable
+            isSelected={activeFilters.includes(type)}
+            onPress={() => handleSelectFilter(type)}
+          />
         ))}
       </View>
       <TouchableOpacity onPress={handleClearFilters}>

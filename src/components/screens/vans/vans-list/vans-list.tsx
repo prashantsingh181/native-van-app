@@ -18,8 +18,9 @@ export const VansList = ({ vans, loading, error }: Readonly<VansListProps>) => {
         numColumns={2}
         columnWrapperStyle={{ gap: 16 }}
         contentContainerStyle={{ gap: 16 }}
+        scrollEnabled={false}
       />
     );
   }
-  return <View style={{ marginTop: 30, flex: 1 }}>{content}</View>;
+  return <View style={{ flex: 1 }}>{content}</View>;
 };
