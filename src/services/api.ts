@@ -1,3 +1,5 @@
+import { vanRatingSummaries } from "@/data/ratings";
+import { reviews } from "@/data/reviews";
 import { vans } from "@/data/vans";
 import { VanTypes } from "@/enums";
 
@@ -24,7 +26,14 @@ class Api {
 
   getVanDetails = (id: string) => {
     const van = vans.find((van) => van.id === id);
-    return this.fakeDataFetch(van);
+    const vanRatings = vanRatingSummaries.find((rating) => rating.vanId === id);
+    const vanReviews = reviews.filter((review) => review.vanId === id);
+    if (!van) throw new Error(`Van with id "${id}" not found`);
+    return this.fakeDataFetch({
+      ...van,
+      ratings: vanRatings,
+      reviews: vanReviews,
+    });
   };
 }
 

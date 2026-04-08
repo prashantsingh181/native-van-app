@@ -15,6 +15,7 @@ export const colors = {
 
   textPrimary: primitives.gray10,
   textSecondary: primitives.gray50,
+  textTertiary: primitives.gray60,
   textMuted: primitives.gray70,
   textInverted: primitives.white,
   textBadge: primitives.orange200,
@@ -22,6 +23,9 @@ export const colors = {
   bgDarkPrimary: primitives.gray10,
   bgDarkSecondary: primitives.gray40,
   bgGreenBadge: primitives.green700,
+  bgRating: primitives.gray80,
+
+  borderRating: primitives.gray90,
 };
 
 export type Colors = typeof colors;

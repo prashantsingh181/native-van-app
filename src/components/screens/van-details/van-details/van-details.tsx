@@ -1,6 +1,8 @@
 import { VanBadge } from "@/components/ui/van-badge";
 import { useStyles } from "@/hooks/useStyles";
 import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Ratings } from "../ratings";
+import { Reviews } from "../reviews";
 import { generateVanDetailsStyles } from "./van-details.styles";
 import { VanDetailsProps } from "./van-details.types";
 
@@ -20,6 +22,10 @@ export const VanDetails = ({ van }: Readonly<VanDetailsProps>) => {
         <TouchableOpacity>
           <Text style={styles.rentBtn}>Rent this van</Text>
         </TouchableOpacity>
+        {van.ratings && <Ratings {...van.ratings} />}
+        {van.reviews && van.reviews.length > 0 && (
+          <Reviews reviews={van.reviews} />
+        )}
       </View>
     </View>
   );
