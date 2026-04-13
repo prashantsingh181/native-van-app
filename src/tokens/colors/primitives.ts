@@ -25,4 +25,13 @@ export const primitives = {
 
   // green
   green700: "#115E59",
+
+  // red
+  red50: "#fff1f2",
+  red100: "#ffe4e6",
+  red300: "#fca5a5",
+  red500: "#ef4444",
+  red600: "#dc2626",
+  red700: "#b91c1c",
+  red900: "#7f1d1d",
 };

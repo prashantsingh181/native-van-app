@@ -1,5 +1,5 @@
 import { Review } from "@/components/ui/review";
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { Text } from "@react-navigation/elements";
 import { View } from "react-native";
 import { generateReviewsStyles } from "./reviews.styles";

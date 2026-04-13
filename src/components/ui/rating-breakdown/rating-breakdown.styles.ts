@@ -31,13 +31,14 @@ export const generateRatingBarStyles = (colors: Colors) =>
       bottom: 0,
     },
     starLabel: {
-      width: 50,
+      width: 55,
       color: colors.textSecondary,
       fontSize: 14,
     },
     percentage: {
-      width: 60,
+      width: 55,
       color: colors.textSecondary,
       fontSize: 14,
+      textAlign: "right",
     },
   });

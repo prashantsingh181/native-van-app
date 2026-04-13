@@ -1,12 +1,12 @@
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { Text, View } from "react-native";
 import {
-  generateRatingBarStyles,
-  generateRatingBreakdownStyles,
+    generateRatingBarStyles,
+    generateRatingBreakdownStyles,
 } from "./rating-breakdown.styles";
 import {
-  RatingBarProps,
-  RatingDistributionProps,
+    RatingBarProps,
+    RatingDistributionProps,
 } from "./rating-breakdown.types";
 
 export const RatingBreakdown = ({

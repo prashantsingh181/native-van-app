@@ -1,9 +1,9 @@
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { Text, View } from "react-native";
 import {
-  generateReviewStarsStyles,
-  generateReviewStyles,
+    generateReviewStarsStyles,
+    generateReviewStyles,
 } from "./review.styles";
 import { ReviewProps, ReviewStarsProps } from "./review.types";
 

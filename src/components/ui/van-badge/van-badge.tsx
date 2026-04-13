@@ -1,5 +1,5 @@
 import { VanTypes } from "@/enums";
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { StyleProp, Text, TextStyle, TouchableOpacity } from "react-native";
 import { generateVanBadgeStyles } from "./van-badge.styles";
 import { VanBadgeProps } from "./van-badge.types";

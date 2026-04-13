@@ -1,6 +1,6 @@
 import { images } from "@/assets/images";
 import { Routes } from "@/enums";
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { Link } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { generateMissionStyles } from "./mission.styles";

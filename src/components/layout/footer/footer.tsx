@@ -1,4 +1,4 @@
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { Text, View } from "react-native";
 import { generateFooterStyles } from "./footer.styles";
 

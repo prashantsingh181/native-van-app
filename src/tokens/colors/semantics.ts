@@ -26,6 +26,13 @@ export const colors = {
   bgRating: primitives.gray80,
 
   borderRating: primitives.gray90,
+  borderInput: primitives.gray70,
+
+  bgError: primitives.red50,
+  bgErrorEmphasis: primitives.red500,
+  textError: primitives.red600,
+  textErrorSubtle: primitives.red300,
+  borderError: primitives.red500,
 };
 
 export type Colors = typeof colors;

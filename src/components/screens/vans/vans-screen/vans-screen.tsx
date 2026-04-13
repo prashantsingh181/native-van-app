@@ -1,6 +1,6 @@
 import { VanTypes } from "@/enums";
-import { useFetch } from "@/hooks/useFetch";
-import { useStyles } from "@/hooks/useStyles";
+import { useFetch } from "@/hooks/use-fetch";
+import { useStyles } from "@/hooks/use-styles";
 import { api } from "@/services/api";
 import { useEffect, useState } from "react";
 import { Text, View } from "react-native";

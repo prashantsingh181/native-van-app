@@ -1,5 +1,5 @@
 import { VanBadge } from "@/components/ui/van-badge";
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { Ratings } from "../ratings";
 import { Reviews } from "../reviews";

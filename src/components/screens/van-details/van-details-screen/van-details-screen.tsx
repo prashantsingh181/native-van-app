@@ -1,5 +1,5 @@
-import { useFetch } from "@/hooks/useFetch";
-import { useStyles } from "@/hooks/useStyles";
+import { useFetch } from "@/hooks/use-fetch";
+import { useStyles } from "@/hooks/use-styles";
 import { api } from "@/services/api";
 import { colors } from "@/tokens/colors/semantics";
 import AntDesign from "@expo/vector-icons/AntDesign";

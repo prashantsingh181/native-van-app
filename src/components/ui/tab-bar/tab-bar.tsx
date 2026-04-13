@@ -1,7 +1,9 @@
-import { useStyles } from "@/hooks/useStyles";
+import { useAuth } from "@/context";
+import { useStyles } from "@/hooks/use-styles";
 import { colors } from "@/tokens/colors/semantics";
 import { Ionicons } from "@expo/vector-icons";
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import { router } from "expo-router";
 import React, { useEffect, useRef } from "react";
 import { Pressable, Text, View, type LayoutChangeEvent } from "react-native";
 import Animated, {
@@ -19,6 +21,12 @@ const TAB_CONFIG: Record<string, TabConfig> = {
   profile: { label: "Profile", icon: "person-outline", activeIcon: "person" },
 };
 
+const LOGIN_CONFIG: TabConfig = {
+  label: "Login",
+  icon: "log-in-outline",
+  activeIcon: "log-in",
+};
+
 export function CustomTabBar({
   state,
   navigation,
@@ -29,6 +37,7 @@ export function CustomTabBar({
   const tabWidthRef = useRef(0);
   const hasLayout = useSharedValue(false);
   const styles = useStyles(generateTabBarStyles);
+  const { isLoggedIn } = useAuth();
 
   const onContainerLayout = (e: LayoutChangeEvent) => {
     const tw = e.nativeEvent.layout.width / state.routes.length;
@@ -66,13 +75,21 @@ export function CustomTabBar({
 
         {state.routes.map((route, index) => {
           const isActive = state.index === index;
-          const config = TAB_CONFIG[route.name] ?? {
-            label: route.name,
-            icon: "ellipse-outline" as keyof typeof Ionicons.glyphMap,
-            activeIcon: "ellipse" as keyof typeof Ionicons.glyphMap,
-          };
+          const isProfileRoute = route.name === "profile";
+          const showLoginTab = isProfileRoute && !isLoggedIn;
+          const config = showLoginTab
+            ? LOGIN_CONFIG
+            : (TAB_CONFIG[route.name] ?? {
+                label: route.name,
+                icon: "ellipse-outline" as keyof typeof Ionicons.glyphMap,
+                activeIcon: "ellipse" as keyof typeof Ionicons.glyphMap,
+              });
 
           const onPress = () => {
+            if (showLoginTab) {
+              router.push("/login");
+              return;
+            }
             const event = navigation.emit({
               type: "tabPress",
               target: route.key,

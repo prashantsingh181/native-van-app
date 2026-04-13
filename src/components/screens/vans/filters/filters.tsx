@@ -1,6 +1,6 @@
 import { VanBadge } from "@/components/ui/van-badge";
 import { VanTypes } from "@/enums";
-import { useStyles } from "@/hooks/useStyles";
+import { useStyles } from "@/hooks/use-styles";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { generateFilterStyles } from "./filters.styles";
